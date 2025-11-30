@@ -9,9 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("No value added. please add a task and try agian");
     } else {
       const Li = `<li>${taskText}</li>`;
-      const Remove = `<button class="remove-btn">Remove</button>`;
       const listItem = document.createElement("li");
-      listItem.innerHTML = Li + Remove;
+      const Remove = document.createElement("button");
+      Remove.textContent = "Remove";
+      Remove.className = "remove-btn";
+      listItem.innerHTML = Li;
+      listItem.appendChild(Remove);
       taskList.appendChild(listItem);
       taskInput.value = "";
     }
