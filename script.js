@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("No value added. please add a task and try agian");
     } else {
       const Li = `<li>${taskText}</li>`;
-      const Remove = `<button class="remove-btn"">Remove</button>`;
+      const Remove = `<button class="remove-btn">Remove</button>`;
       const listItem = document.createElement("li");
       listItem.innerHTML = Li + Remove;
       taskList.appendChild(listItem);
